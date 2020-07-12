@@ -13,6 +13,9 @@ class ProfileListViewController: UIViewController {
     @IBOutlet weak var createProfileButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var emptyDataImageView: UIImageView!
+    
+    var refreshControl = UIRefreshControl()
+    
     private var dataSource = [Any]() {
         didSet {
             emptyDataImageView.isHidden = !dataSource.isEmpty
@@ -33,10 +36,22 @@ class ProfileListViewController: UIViewController {
     }
     
     private func setupTableView() {
+        
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+        tableView.addSubview(refreshControl)
+        
         tableView.dataSource = self
         tableView.delegate = self
         tableView.separatorStyle = .none
         tableView.register(UINib.init(nibName: "ProfileListCell", bundle: nil), forCellReuseIdentifier: "profileListCell")
+    }
+    
+    @objc func refresh(_ sender: AnyObject) {
+       // Code to refresh table view
+        setupTableData()
+        tableView.reloadData()
+        refreshControl.endRefreshing()
     }
     
 }

@@ -12,13 +12,14 @@ struct textFieldStruct {
     var text: String
 }
 
-class txtFieldCell: UITableViewCell {
+class TextFieldCell: UITableViewCell {
 @IBOutlet weak var txtField: UITextField!
     
     var textField = textFieldStruct(text: "")
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        txtField.delegate = self
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -26,12 +27,14 @@ class txtFieldCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    func setText(text : String) {
-        self.textField.text = text
+    
+    func setData(title: String, value: String?) {
+//        self.txtField.placeholder = title
+        self.textField.text = title ?? ""
     }
 }
 
-extension txtFieldCell: UITextFieldDelegate {
+extension TextFieldCell: UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         txtField.text = textField.text
     }

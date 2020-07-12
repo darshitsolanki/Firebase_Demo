@@ -8,17 +8,20 @@
 
 import UIKit
 
-struct txtArea {
+struct TextArea {
     var text: String
 }
 
-class txtAreaCell: UITableViewCell {
+class TextAreaCell: UITableViewCell {
   @IBOutlet weak var descriptionArea: UITextView!
     
-    var textArea = txtArea(text: "asdf")
+    var textArea = TextArea(text: "\n\n detail description")
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        descriptionArea.text = "Placeholder"
+        descriptionArea.textColor = UIColor.lightGray
+        descriptionArea.delegate = self
         descriptionArea.layer.borderWidth = 1
         descriptionArea.layer.borderColor = UIColor.black.cgColor
     }
@@ -29,13 +32,18 @@ class txtAreaCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setText(text : String) {
-        self.descriptionArea.text = text
+    func setData(title: String, value: String?) {
+//        self.textArea.text = title
+        self.descriptionArea.text = value ?? ""
     }
 }
 
-extension txtAreaCell: UITextViewDelegate {
+extension TextAreaCell: UITextViewDelegate {
     func textViewDidBeginEditing(_ textView: UITextView) {
+        if descriptionArea.textColor == UIColor.lightGray {
+            descriptionArea.text = nil
+            descriptionArea.textColor = UIColor.black
+        }
         descriptionArea.text = ""
         descriptionArea.text = textView.text
     }
