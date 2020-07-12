@@ -18,8 +18,6 @@ class ColorCollectionCell: UICollectionViewCell {
     
     func setColors(color: UIColor) {
         colorImg.layer.cornerRadius = 0
-        
-//        self.backgroundColor = color
         self.colorImg.tintColor = color
     }
 }
