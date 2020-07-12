@@ -13,7 +13,12 @@ class ProfileListViewController: UIViewController {
     @IBOutlet weak var createProfileButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var emptyDataImageView: UIImageView!
-    private var dataSource = [Any]()
+    private var dataSource = [Any]() {
+        didSet {
+            emptyDataImageView.isHidden = !dataSource.isEmpty
+            tableView.isHidden = dataSource.isEmpty
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +33,6 @@ class ProfileListViewController: UIViewController {
     }
     
     private func setupTableView() {
-        tableView.isHidden = dataSource.isEmpty
-        emptyDataImageView.isHidden = !dataSource.isEmpty
         tableView.dataSource = self
         tableView.delegate = self
         tableView.separatorStyle = .none
@@ -49,6 +52,23 @@ extension ProfileListViewController: UITableViewDataSource {
         cell.setData()
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+            if editingStyle == .delete {
+                let deleteAlert = UIAlertController(title: "Delete", message: "Are You sure You want to delete this profile? ", preferredStyle: UIAlertController.Style.alert)
+                deleteAlert.addAction(UIAlertAction(title: "Confirm", style: .default, handler: { (action: UIAlertAction!) in
+                    
+                    self.dataSource.remove(at: indexPath.row)
+                    tableView.deleteRows(at: [indexPath], with: .fade)
+                    
+                }))
+                deleteAlert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { (action: UIAlertAction!) in
+                    deleteAlert .dismiss(animated: true, completion: nil)
+                }))
+                present(deleteAlert, animated: true, completion: nil)
+                
+            }
+        }
     
 }
 
