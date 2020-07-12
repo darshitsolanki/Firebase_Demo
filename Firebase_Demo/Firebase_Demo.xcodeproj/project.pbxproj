@@ -18,6 +18,15 @@
 		CB97D9D724BA288300355D92 /* ProfileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB97D9D624BA288300355D92 /* ProfileListViewController.swift */; };
 		CB97D9DD24BA351600355D92 /* ProfileListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB97D9DB24BA351600355D92 /* ProfileListCell.swift */; };
 		CB97D9DE24BA351600355D92 /* ProfileListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB97D9DC24BA351600355D92 /* ProfileListCell.xib */; };
+		CBA6116324BB2A83006396DF /* ColorCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA6116124BB2A83006396DF /* ColorCollectionCell.xib */; };
+		CBA6116424BB2A83006396DF /* ColorCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA6116224BB2A83006396DF /* ColorCollectionCell.swift */; };
+		CBA6116B24BB2A93006396DF /* txtAreaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA6116524BB2A93006396DF /* txtAreaCell.xib */; };
+		CBA6116C24BB2A93006396DF /* collectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA6116624BB2A93006396DF /* collectionCell.swift */; };
+		CBA6116D24BB2A93006396DF /* txtAreaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA6116724BB2A93006396DF /* txtAreaCell.swift */; };
+		CBA6116E24BB2A93006396DF /* txtFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA6116824BB2A93006396DF /* txtFieldCell.swift */; };
+		CBA6116F24BB2A93006396DF /* collectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA6116924BB2A93006396DF /* collectionCell.xib */; };
+		CBA6117024BB2A93006396DF /* txtFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBA6116A24BB2A93006396DF /* txtFieldCell.xib */; };
+		CBA6117224BB2AD8006396DF /* ProfileFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA6117124BB2AD8006396DF /* ProfileFormVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +64,15 @@
 		CB97D9D624BA288300355D92 /* ProfileListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListViewController.swift; sourceTree = "<group>"; };
 		CB97D9DB24BA351600355D92 /* ProfileListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListCell.swift; sourceTree = "<group>"; };
 		CB97D9DC24BA351600355D92 /* ProfileListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileListCell.xib; sourceTree = "<group>"; };
+		CBA6116124BB2A83006396DF /* ColorCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorCollectionCell.xib; sourceTree = "<group>"; };
+		CBA6116224BB2A83006396DF /* ColorCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCollectionCell.swift; sourceTree = "<group>"; };
+		CBA6116524BB2A93006396DF /* txtAreaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = txtAreaCell.xib; sourceTree = "<group>"; };
+		CBA6116624BB2A93006396DF /* collectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = collectionCell.swift; sourceTree = "<group>"; };
+		CBA6116724BB2A93006396DF /* txtAreaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = txtAreaCell.swift; sourceTree = "<group>"; };
+		CBA6116824BB2A93006396DF /* txtFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = txtFieldCell.swift; sourceTree = "<group>"; };
+		CBA6116924BB2A93006396DF /* collectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = collectionCell.xib; sourceTree = "<group>"; };
+		CBA6116A24BB2A93006396DF /* txtFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = txtFieldCell.xib; sourceTree = "<group>"; };
+		CBA6117124BB2AD8006396DF /* ProfileFormVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileFormVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +126,7 @@
 				CB97D9D824BA323B00355D92 /* custom */,
 				CB97D9A624BA1BBA00355D92 /* AppDelegate.swift */,
 				CB97D9A824BA1BBA00355D92 /* SceneDelegate.swift */,
+				CBA6117124BB2AD8006396DF /* ProfileFormVC.swift */,
 				CB97D9AA24BA1BBA00355D92 /* ViewController.swift */,
 				CB97D9D624BA288300355D92 /* ProfileListViewController.swift */,
 				CB97D9AC24BA1BBA00355D92 /* Main.storyboard */,
@@ -147,6 +166,7 @@
 		CB97D9D924BA324500355D92 /* cells */ = {
 			isa = PBXGroup;
 			children = (
+				CBA6116024BB2A38006396DF /* profileDetails */,
 				CB97D9DA24BA324F00355D92 /* profileList */,
 			);
 			path = cells;
@@ -159,6 +179,21 @@
 				CB97D9DC24BA351600355D92 /* ProfileListCell.xib */,
 			);
 			path = profileList;
+			sourceTree = "<group>";
+		};
+		CBA6116024BB2A38006396DF /* profileDetails */ = {
+			isa = PBXGroup;
+			children = (
+				CBA6116624BB2A93006396DF /* collectionCell.swift */,
+				CBA6116924BB2A93006396DF /* collectionCell.xib */,
+				CBA6116724BB2A93006396DF /* txtAreaCell.swift */,
+				CBA6116524BB2A93006396DF /* txtAreaCell.xib */,
+				CBA6116824BB2A93006396DF /* txtFieldCell.swift */,
+				CBA6116A24BB2A93006396DF /* txtFieldCell.xib */,
+				CBA6116224BB2A83006396DF /* ColorCollectionCell.swift */,
+				CBA6116124BB2A83006396DF /* ColorCollectionCell.xib */,
+			);
+			path = profileDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +302,10 @@
 			files = (
 				CB97D9B324BA1BC000355D92 /* LaunchScreen.storyboard in Resources */,
 				CB97D9DE24BA351600355D92 /* ProfileListCell.xib in Resources */,
+				CBA6116F24BB2A93006396DF /* collectionCell.xib in Resources */,
+				CBA6116324BB2A83006396DF /* ColorCollectionCell.xib in Resources */,
+				CBA6116B24BB2A93006396DF /* txtAreaCell.xib in Resources */,
+				CBA6117024BB2A93006396DF /* txtFieldCell.xib in Resources */,
 				CB97D9B024BA1BC000355D92 /* Assets.xcassets in Resources */,
 				CB97D9AE24BA1BBA00355D92 /* Main.storyboard in Resources */,
 			);
@@ -293,11 +332,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBA6117224BB2AD8006396DF /* ProfileFormVC.swift in Sources */,
 				CB97D9AB24BA1BBA00355D92 /* ViewController.swift in Sources */,
 				CB97D9DD24BA351600355D92 /* ProfileListCell.swift in Sources */,
 				CB97D9A724BA1BBA00355D92 /* AppDelegate.swift in Sources */,
 				CB97D9D724BA288300355D92 /* ProfileListViewController.swift in Sources */,
 				CB97D9A924BA1BBA00355D92 /* SceneDelegate.swift in Sources */,
+				CBA6116D24BB2A93006396DF /* txtAreaCell.swift in Sources */,
+				CBA6116C24BB2A93006396DF /* collectionCell.swift in Sources */,
+				CBA6116424BB2A83006396DF /* ColorCollectionCell.swift in Sources */,
+				CBA6116E24BB2A93006396DF /* txtFieldCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

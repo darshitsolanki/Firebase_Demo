@@ -69,9 +69,18 @@ extension ProfileListViewController: UITableViewDataSource {
                 
             }
         }
+    @IBAction func createProfile(_ sender: UIButton) {
+       
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ProfileFormVC") as! UIViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
 }
 
 extension ProfileListViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ProfileFormVC") as! UIViewController
+        vc.navigationItem.title = "Update Profile"
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
