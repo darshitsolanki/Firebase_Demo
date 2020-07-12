@@ -10,6 +10,8 @@ import UIKit
 
 class ProfileListCell: UITableViewCell {
 
+    
+    @IBOutlet weak var rightButton: UIButton!
     @IBOutlet weak var colorImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
@@ -27,6 +29,7 @@ class ProfileListCell: UITableViewCell {
         emailLabel.textColor = UIColor.black
         detailDescriptionLabel.textColor = textGreyColor
         timeLabel.textColor = textGreyColor
+        selectionStyle = .none
     }
     
     func setData() {
